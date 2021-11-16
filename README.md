@@ -60,6 +60,11 @@ The average pedestrian traffic volume of the weekdays is higher than the weekend
 
 The average pedestrian traffic volume of Sensor 38 - Flinders St-Swanston St (West) is the highest. Sensor 4, 22, 41, 60 are also considered in the top 5 sensors with the most average pedestrain count in the Melbourne CBD. From the plot, we can see that most sensors have recorded more pedestrains in the weekdays than the weekends. Specifically, Sensor 15, 19, 26, 28, 32, 35, and 66 have higher pedestrain counts in the weekends. In addition, the pedestrain count trends for the weekdays and weekends are similar, with the exception of Sensor 9, 13, 16, 18, 24, 57, and 58. These sensors have big different in the pedestrain counts between the weekdays and weekends. From this information, we know that these places are crowded only in the weekdays, thus these places possible near to work places or school.
 
+## Feature Extraction
+Feature Extraction and Selection is done by using:
+* Statistical Method: Hypothesis Testing 
+* Visualisation: Look at **Seasonality** and **Correlation**
+
 ## Models Evaluation
 **Use case 1: Predict whether count would go above 2000 for the hours between 9:00am and midnight**
 
@@ -75,10 +80,22 @@ The average pedestrian traffic volume of Sensor 38 - Flinders St-Swanston St (We
   * Recall = 0.542379
   * f1 = 0.658466 
 
+**Use case 2: Predict the possible count for the hours between 9:00am and midnight**
+
+* Decision Tree Model: RMSE = 660.7
+
+* Gradient Boosted Tree Model: RMSE = 625.3
+
 **Discussion:**
+
+*Use Case 1* 
 
 Accuracy is normally suitable to be used in measuring the model performance of binary multiclass classification. However, The data set is imbalanced, and all the data points are classified as the majority class data points (i.e., hourly counts lower than 2000), causing high accuracy of the model. Therefore, although the models are relatively accurate, it will be not valuable as accuracy is not so reliable in measuring the model performance for this data set. F-score is most suitable to measure the model performance because it is a score that maintains a balance between the precision and recall of the model, where precision will summarise the fraction of the true positive class to the positive class and recall measure how accurate the positive class was predicted. For this case, it is important to have for the model that is good at precision and recall. For example, it is vital to be sure that the pedestrian counts at the specific location is actually high i.e., >2000 (precision) for the performers, and to record as many locations with high pedestrian counts in the CBD of Melbourne as possible (recall).
 
 According to the AUC results, the F1 score is higher in the Gradient Boosted Tree (GBT) Model, thus a better model. Gradient-Boosted Trees (GBTs) are ensembles of decision trees. GBTs iteratively train decision trees in order to minimize a loss function. Like decision trees, GBTs handle categorical features, extend to the multiclass classification setting, do not require feature scaling, and are able to capture non-linearities and feature interactions.
+
+*Use Case 2*
+
+The GBT model is better as it has lower RMSE and R-square that is closer to 1. The GBT model with lower RMSE have predicted values that are closer to the observed data. Its R-square that is closer to 1 also shows that there are more observed data fitted into the regression line.
 
 
