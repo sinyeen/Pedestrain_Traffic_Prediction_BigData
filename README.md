@@ -1,4 +1,4 @@
-# Data Processing for Big Data: Pedustrain Traffic Prediction :walking_man: :vertical_traffic_light:
+# Data Processing for Big Data: Pedestrain Traffic Prediction :walking_man: :vertical_traffic_light:
 ![](https://img.shields.io/badge/Author-SinYee-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Tool-PySpark-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Tool-MLlib-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Tool-Pandas-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
 ## Project Overview
 Develop machine learning models to predict the pedestrian traffic in the City of Melbourne. The machine learning models would be further integrated into the streaming platform using `Apache Kafka` and `Apache Spark` Streaming to perform prediction. The aim of this project is to build models for predicting whether the potential count would go above the threshold of 2000 and also predicting the possible count.
