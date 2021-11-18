@@ -60,10 +60,15 @@ The average pedestrian traffic volume of the weekdays is higher than the weekend
 
 The average pedestrian traffic volume of Sensor 38 - Flinders St-Swanston St (West) is the highest. Sensor 4, 22, 41, 60 are also considered in the top 5 sensors with the most average pedestrain count in the Melbourne CBD. From the plot, we can see that most sensors have recorded more pedestrains in the weekdays than the weekends. Specifically, Sensor 15, 19, 26, 28, 32, 35, and 66 have higher pedestrain counts in the weekends. In addition, the pedestrain count trends for the weekdays and weekends are similar, with the exception of Sensor 9, 13, 16, 18, 24, 57, and 58. These sensors have big different in the pedestrain counts between the weekdays and weekends. From this information, we know that these places are crowded only in the weekdays, thus these places possible near to work places or school.
 
-## Feature Extraction
-Feature Extraction and Selection is done by using:
+## Feature Engineering
+Perform one-step time-series prediction
 * Statistical Method: Hypothesis Testing 
 * Visualisation: Look at **Seasonality** and **Correlation**
+
+Prepare Pipelines for Spark ML Transformers/Estimators for features and labels
+* `StringIndexer`
+* `One Hot Encoder (OHE)`
+* `VectorAssembler`
 
 ## Models Evaluation
 **Use case 1: Predict whether count would go above 2000 for the hours between 9:00am and midnight**
